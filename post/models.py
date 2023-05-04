@@ -5,8 +5,8 @@ from datetime import date
 CATEGORIES = (
     ("art", "Art"),
     ("technology", "Technology"),
-     ("music", "Music"),
-      ("food", "Food"),
+    ("music", "Music"),
+    ("food", "Food"),
 )
 
 
