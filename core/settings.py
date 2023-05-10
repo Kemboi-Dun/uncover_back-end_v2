@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -35,12 +35,14 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
     "https://uncover-c4af9.web.app",
     "http://localhost:3000",
+    "http://localhost:8000",
     "https://uncoverback-endv2-production.up.railway.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://uncover-c4af9.web.app",
     "http://localhost:3000",
+    "http://localhost:8000",
     "https://uncoverback-endv2-production.up.railway.app",
 ]
 
