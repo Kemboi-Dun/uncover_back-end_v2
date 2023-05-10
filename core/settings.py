@@ -29,23 +29,19 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    "https://uncover-c4af9.web.app/",
-    "http://localhost:3000/",
-    "https://uncoverback-endv2-production.up.railway.app/",
-]
+ALLOWED_HOSTS = ['*']
 
 ##
 CORS_ALLOWED_ORIGINS = [
-    "https://uncover-c4af9.web.app/",
-    "http://localhost:3000/",
-    "https://uncoverback-endv2-production.up.railway.app/",
+    "https://uncover-c4af9.web.app",
+    "http://localhost:3000",
+    "https://uncoverback-endv2-production.up.railway.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://uncover-c4af9.web.app/",
-    "http://localhost:3000/",
-    "https://uncoverback-endv2-production.up.railway.app/",
+    "https://uncover-c4af9.web.app",
+    "http://localhost:3000",
+    "https://uncoverback-endv2-production.up.railway.app",
 ]
 
 # Application definition
