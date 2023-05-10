@@ -10,8 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,16 +24,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4sw9)i@8p$^laf*1!#mgtp@-j+jt$f14rz)^(l585lnn$rg5a1'
+SECRET_KEY = os.getenv(SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "https://uncover-c4af9.web.app/",
+    "http://localhost:3000/",
+    "https://uncoverback-endv2-production.up.railway.app/",
+]
 
 ##
-# *?allow all CORS origins
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://uncover-c4af9.web.app/",
+    "http://localhost:3000/",
+    "https://uncoverback-endv2-production.up.railway.app/",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://uncover-c4af9.web.app/",
+    "http://localhost:3000/",
+    "https://uncoverback-endv2-production.up.railway.app/",
+]
 
 # Application definition
 
